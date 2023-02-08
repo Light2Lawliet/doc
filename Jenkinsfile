@@ -1,10 +1,13 @@
 pipeline{
-    agent{
+    agent any{
         node{
             label 'docker-agent-python'
         }
     }
     stages{
+        stage("cloneing"){
+            steps{
+                
         stage('Build'){
             steps{
                 echo "building..."
